@@ -24,3 +24,4 @@ Features in progress:
 Multiple Difficulty Levels that involves timer: Choose from different difficulty levels to match your skill level.
 Customizable Cards: You can easily customize the content of the cards to make the game more personalized.
 Scoring: Your score is based on the time and number of moves taken to complete the game.
+Game preventing a user from double clicking the same card. 
