@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href = "styles.css">
+    <title>Matching Game</title>
+</head>
+<body onload="gameStart()"> 
+    <header>
+        <span style="color: #4285f4; ;">f</span>
+        <span style="color: #fbbc05;">i</span>
+        <span style="color: #ea4335;">n</span>
+        <span style="color: #34a853;">d</span>
+        &nbsp;
+        <span style="color: #fbbc05;">a</span>
+        &nbsp;
+        <span style="color: #4285f4;">m</span>
+        <span style="color: #ea4335;">a</span>
+        <span style="color: #34a853;">t</span>
+        <span style="color: #fbbc05;">c</span>
+        <span style="color: #4285f4;">h</span>
+        <span style="color: #4285f4;">i</span>
+        <span style="color: #fbbc05;">n</span>
+        <span style="color: #ea4335;">g</span>
+        &nbsp;
+        <span style="color: #34a853;">p</span>
+        <span style="color: #fbbc05;">a</span>
+        <span style="color: #4285f4;">i</span>
+        <span style="color: #ea4335;">r</span>
+     </header>
+
+     <div id="modal-container">
+      <div id="modal">
+        <img id="mario-group"src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimg00.deviantart.net%2F7ed4%2Fi%2F2015%2F161%2F0%2Fa%2Fteam_super_mario_bros__2__2015_render__by_banjo2015-d8wqltb.png&f=1&nofb=1&ipt=e768322a0a2690c56b7062d9681581e45ecd4cf837f475507b6c11c5f5a19b64&ipo=images" alt="mario-group"/>
+        <p>Great job!!!</p>
+        <p id="game-output"></p>
+        <button id="new-game">Start a new game</button>
+      </div>
+   </div>
+     <section class="main-section">
+    <div class="card mario" data-image="mario">
+        <img class="card-front" src= "https://clipground.com/images/mario-clipart-2.jpg"  alt="mario"/>
+        <img class="card-back" src="https://clipground.com/images/bros-clipart-12.jpg" alt="mario-crew"/>
+      </div>
+  
+      <div class="card mario" data-image="mario">
+        <img class="card-front" src="https://clipground.com/images/mario-clipart-2.jpg"  alt="mario"/>
+        <img class="card-back" src="https://clipground.com/images/bros-clipart-12.jpg" alt="mario-crew"/>
+      </div>
+  
+      <div class="card luigi" data-image="luigi" >
+        <img class="card-front" src="https://clipground.com/images/mario-brothers-clipart-11.jpg"  alt="luigi"/>
+        <img class="card-back" src="https://clipground.com/images/bros-clipart-12.jpg" alt="mario-crew"/>
+      </div>
+   
+      <div class="card luigi" data-image="luigi" >
+        <img class="card-front" src="https://clipground.com/images/mario-brothers-clipart-11.jpg" alt="luigi"/>
+        <img class="card-back" src="https://clipground.com/images/bros-clipart-12.jpg" alt="mario-crew"/>
+      </div>
+    
+        <div class="card peach" data-image="peach">
+        <img class="card-front" src="https://th.bing.com/th/id/R.b18a39ddfd8f3e1065ad6dd95892d954?rik=ZFDVSLklfUYT1g&pid=ImgRaw&r=0"  alt="peach"/>
+        <img class="card-back" src="https://clipground.com/images/bros-clipart-12.jpg" alt="mario-crew"/>
+      </div>
+ 
+      <div class="card peach" data-image="peach">
+        <img class="card-front" src="https://th.bing.com/th/id/R.b18a39ddfd8f3e1065ad6dd95892d954?rik=ZFDVSLklfUYT1g&pid=ImgRaw&r=0"  alt="peach"/>
+        <img class="card-back" src="https://clipground.com/images/bros-clipart-12.jpg" alt="mario-crew"/>
+      </div>
+    
+      <div class="card yoshi" data-image="yoshi">
+        <img class="card-front" src="https://images1.wikia.nocookie.net/__cb20120813013016/yoshi/images/4/49/MP9_Yoshi.png"  alt="yoshi"/>
+        <img class="card-back" src="https://clipground.com/images/bros-clipart-12.jpg" alt="mario-crew"/>
+      </div>
+  
+      <div class="card yoshi" data-image="yoshi">
+        <img class="card-front" src="https://images1.wikia.nocookie.net/__cb20120813013016/yoshi/images/4/49/MP9_Yoshi.png"  alt="yoshi"/>
+        <img class="card-back" src="https://clipground.com/images/bros-clipart-12.jpg" alt="mario-crew"/>
+      </div>
+  
+      <div class="card goomba" data-image="goomba">
+        <img class="card-front"  src="https://th.bing.com/th/id/OIP.U8aOqyn7H1urOcKlqKCyYwHaIo?pid=ImgDet&rs=1"  alt="goomba"/>
+        <img class="card-back" src="https://clipground.com/images/bros-clipart-12.jpg" alt="mario-crew"/>
+      </div>
+    
+      <div class="card goomba" data-image="goomba">
+        <img class="card-front" src="https://th.bing.com/th/id/OIP.U8aOqyn7H1urOcKlqKCyYwHaIo?pid=ImgDet&rs=1"  alt="goomba"/>
+        <img class="card-back" src="https://clipground.com/images/bros-clipart-12.jpg" alt="mario-crew"/>
+      </div>
+  
+      <div class="card bowser" data-image="bowser">
+        <img class="card-front" src="https://clipground.com/images/bowser-clipart-16.png"  alt="bowser"/>
+        <img class="card-back" src="https://clipground.com/images/bros-clipart-12.jpg" alt="mario-crew"/>
+      </div>
+   
+      <div class="card bowser" data-image="bowser">
+        <img class="card-front" src="https://clipground.com/images/bowser-clipart-16.png"  alt="bowser"/>    
+        <img class="card-back" src="https://clipground.com/images/bros-clipart-12.jpg" alt="mario-crew"/>
+      </div>
+  
+    <div class="card wario" data-image="wario">
+        <img class="card-front" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.mariowiki.com%2Fimages%2Fthumb%2F2%2F29%2FSMPWario.png%2F1200px-SMPWario.png&f=1&nofb=1&ipt=1cc07d7414a34f86f678b49549810b80791651eed27d4010fdd79556112bca78&ipo=images"  alt="wario"/>
+        <img class="card-back" src="https://clipground.com/images/bros-clipart-12.jpg" alt="mario-crew"/>
+      </div>
+    
+      <div class="card wario" data-image="wario">
+        <img class="card-front" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.mariowiki.com%2Fimages%2Fthumb%2F2%2F29%2FSMPWario.png%2F1200px-SMPWario.png&f=1&nofb=1&ipt=1cc07d7414a34f86f678b49549810b80791651eed27d4010fdd79556112bca78&ipo=images"  alt="wario"/>
+        <img class="card-back" src="https://clipground.com/images/bros-clipart-12.jpg" alt="mario-crew"/>
+      </div>
+
+      <div class="card donkey-kong" data-image="donkey-kong">
+        <img class="card-front " src="https://clipground.com/images/donkey-kong-clip-art-10.jpg" alt="donkey-kong"/>
+        <img class="card-back" src="https://clipground.com/images/bros-clipart-12.jpg" alt="mario-crew"/>
+      </div>
+  
+      <div class="card donkey-kong" data-image="donkey-kong">
+        <img class="card-front" src="https://clipground.com/images/donkey-kong-clip-art-10.jpg" alt="donkey-kong"/>
+        <img class="card-back" src="https://clipground.com/images/bros-clipart-12.jpg" alt="mario-crew"/>
+      </div>
+    
+      <div class="card toad" data-image="toad">
+        <img class="card-front" src="https://th.bing.com/th/id/R.b27a9d2667be12c59c50f5d2dfef01b9?rik=rLcUhH1RFBrThg&pid=ImgRaw&r=0"  alt="toad"/>
+        <img class="card-back" src="https://clipground.com/images/bros-clipart-12.jpg" alt="mario-crew"/>
+      </div>
+    
+      <div class="card toad" data-image="toad">
+        <img class="card-front" src="https://th.bing.com/th/id/R.b27a9d2667be12c59c50f5d2dfef01b9?rik=rLcUhH1RFBrThg&pid=ImgRaw&r=0"  alt="toad"/>
+        <img class="card-back" src="https://clipground.com/images/bros-clipart-12.jpg" alt="mario-crew"/>
+      </div>
+ 
+      <div class="card boo" data-image="boo">
+        <img class="card-front " src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.superluigibros.com%2Fimages%2Fmedia%2Fartwork%2Fwii%2Fnew_super_mario_bros%2Flarge%2FEnemies%2FBoo.PNG&f=1&nofb=1&ipt=536cadfc464f7424de83c1552507363c744ed6921db9a682e6a71c85e0511a8f&ipo=images"  alt="boo"/>
+        <img class="card-back" src="https://clipground.com/images/bros-clipart-12.jpg" alt="mario-crew"/>
+      </div>
+    
+      <div class="card boo" data-image="boo">
+        <img class="card-front" src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.superluigibros.com%2Fimages%2Fmedia%2Fartwork%2Fwii%2Fnew_super_mario_bros%2Flarge%2FEnemies%2FBoo.PNG&f=1&nofb=1&ipt=536cadfc464f7424de83c1552507363c744ed6921db9a682e6a71c85e0511a8f&ipo=images"  alt="boo"/>
+        <img class="card-back" src="https://clipground.com/images/bros-clipart-12.jpg" alt="mario-crew"/>
+      </div>
+    
+      <div class="card bowser-jr" data-image="bowser-jr">
+        <img class="card-front " src="https://clipground.com/images/bowser-clipart-11.png"  alt="bowser-jr"/>
+        <img class="card-back" src="https://clipground.com/images/bros-clipart-12.jpg" alt="mario-crew"/>
+      </div>
+   
+      <div class="card bowser-jr" data-image="bowser-jr">
+        <img class="card-front" src="https://clipground.com/images/bowser-clipart-11.png"  alt="bowser-jr"/>
+        <img class="card-back" src="https://clipground.com/images/bros-clipart-12.jpg" alt="mario-crew"/>
+      </div>
+    
+      <div class="card monty-mole" data-image="monty-mole">
+        <img class="card-front" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.mariowiki.com%2Fimages%2Fthumb%2F2%2F20%2FMontymoleNSMBU.png%2F1200px-MontymoleNSMBU.png&f=1&nofb=1&ipt=053529f60abbe14a8f0579321adde1dc59dd8de51edbe12538666a0573d73df7&ipo=images"  alt="monty-mole"/>
+        <img class="card-back" src="https://clipground.com/images/bros-clipart-12.jpg" alt="mario-crew"/>
+      </div>
+   
+      <div class="card  monty-mole" data-image="monty-mole">
+        <img class="card-front" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.mariowiki.com%2Fimages%2Fthumb%2F2%2F20%2FMontymoleNSMBU.png%2F1200px-MontymoleNSMBU.png&f=1&nofb=1&ipt=053529f60abbe14a8f0579321adde1dc59dd8de51edbe12538666a0573d73df7&ipo=images"  alt="monty-mole"/>
+        <img class="card-back" src="https://clipground.com/images/bros-clipart-12.jpg" alt="mario-crew"/>
+      </div>
+    
+      <div class="card shy-guy" data-image="shy-guy">
+        <img class="card-front" src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fimg2.wikia.nocookie.net%2F__cb20130702000259%2Fssb-tourney%2Fimages%2F3%2F30%2FShy_Guy_CG_Art.png&f=1&nofb=1&ipt=49e9ce600147d72e2d19231d2adb96a841f39cd8c7227c696c7a2bbded086185&ipo=images" alt="shy-guy"/>
+        <img class="card-back" src="https://clipground.com/images/bros-clipart-12.jpg" alt="mario-crew"/>
+      </div> 
+    
+      <div class="card shy-guy" data-image="shy-guy">
+        <img class="card-front" src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fimg2.wikia.nocookie.net%2F__cb20130702000259%2Fssb-tourney%2Fimages%2F3%2F30%2FShy_Guy_CG_Art.png&f=1&nofb=1&ipt=49e9ce600147d72e2d19231d2adb96a841f39cd8c7227c696c7a2bbded086185&ipo=images" alt="shy-guy"/>
+        <img class="card-back" src="https://clipground.com/images/bros-clipart-12.jpg" alt="mario-crew"/>
+      </div> 
+   
+       <div class="card koopa-troopa" data-image="koopa-troopa">
+        <img class="card-front" src="https://clipground.com/images/super-mario-brothers-clipart-15.jpg"  alt="koopa-troopa"/>
+        <img class="card-back" src="https://clipground.com/images/bros-clipart-12.jpg" alt="mario-crew"/>
+      </div>
+      <div class="card koopa-troopa" data-image="koopa-troopa">
+        <img class="card-front" src="https://clipground.com/images/super-mario-brothers-clipart-15.jpg"  alt="koopa-troopa"/>
+        <img class="card-back" src="https://clipground.com/images/bros-clipart-12.jpg" alt="mario-crew"/>
+      </div> 
+   
+       <div class="card waluigi" data-image="waluigi">
+        <img class="card-front" src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fimages.wikia.com%2Fnintendo%2Fen%2Fimages%2F4%2F46%2FWaluigi.png&f=1&nofb=1&ipt=71899d8f7160ca1267aa59848158746e1bdc3c64578035d7409bd2044e4e18be&ipo=images" alt="waluigi"/>
+        <img class="card-back" src="https://clipground.com/images/bros-clipart-12.jpg" alt="mario-crew"/>
+      </div>
+   
+      <div class="card waluigi" data-image="waluigi">
+        <img class="card-front" src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fimages.wikia.com%2Fnintendo%2Fen%2Fimages%2F4%2F46%2FWaluigi.png&f=1&nofb=1&ipt=71899d8f7160ca1267aa59848158746e1bdc3c64578035d7409bd2044e4e18be&ipo=images" alt="waluigi"/>
+        <img class="card-back" src="https://clipground.com/images/bros-clipart-12.jpg" alt="mario-crew"/>
+      </div> 
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
