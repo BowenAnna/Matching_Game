@@ -18,7 +18,7 @@ let cards =[...card];
 
 function gameStart() {
     cards.forEach(card => {
-      let ramdomPos = Math.floor(Math.random() * 30);
+      let ramdomPos = Math.floor(Math.random() * cards.length);
       card.style.order = ramdomPos;
     });}
 
@@ -27,7 +27,7 @@ function gameStart() {
     let flippedCard = false;   
     let firstCard, secondCard;
     let count = 0;
-    let index =0;
+    let index = 0;
 
     function cardFlip(){
         
